@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="search-film">
+    <ng-container *ngTemplateOutlet="search"/>
+  </div>
+  <div class="list-film">
+    <ng-container *ngTemplateOutlet="listFilmSearch"/>
+  </div>
+</div>
+<ng-template #search>
+  <app-search-film class="content-search" (eventEmitter)="handleData($event)"/>
+</ng-template>
+
+<ng-template #listFilmSearch>
+  <app-list-search [data]="dataFilmQuery"/>
+</ng-template>

@@ -1,0 +1,50 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #edf1f7;
+  }
+
+  .app-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .app-list-item {
+    border-bottom: 1px solid #edf1f7;
+    color: #222b45;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    padding: 8px;
+  }
+
+  .app-list-item:last-child {
+    border-bottom: none;
+  }
+
+  .app-list-icons {
+    padding-right: 5px;
+  }
+
+  .app-button {
+    line-height: 1.2;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: #3182ce;
+    color: #ffffff;
+    cursor: pointer;
+    outline: 0;
+  }
+
+  .mr-5 {
+    margin-right: 5px;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px;
+  }

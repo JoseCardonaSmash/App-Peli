@@ -1,0 +1,41 @@
+.inputs {
+    text-align: left;
+    margin-top: 30px;
+
+
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 65px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif !important;
+  border-radius: 12px;
+  box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.1), inset -6px -6px 6px rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--main-color); /* Agrega un borde para resaltar el input */
+  transition: box-shadow 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+/* Cambia el box-shadow cuando el input está enfocado (hover) */
+input:focus {
+  box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.1), inset -6px -6px 6px rgba(255, 255, 255, 0.7),
+              0 0 5px var(--hover-color);
+}
+

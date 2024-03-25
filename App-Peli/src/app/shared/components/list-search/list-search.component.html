@@ -1,0 +1,10 @@
+<div class="content">
+  <h3>Explorar</h3>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-film" *ngFor="let item of data" [style.background-image]="'url(https://image.tmdb.org/t/p/original' + item.backdrop_path + ')'">
+        <h2 class="title-film">{{ item.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>

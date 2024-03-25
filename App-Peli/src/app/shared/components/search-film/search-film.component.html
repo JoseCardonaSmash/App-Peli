@@ -1,0 +1,3 @@
+<form class="inputs" [formGroup]="searchForm" >
+  <input type="text" placeholder="Titulo, Pelicula o Serie" formControlName="query" (keydown)="onKeyDown($event)"/>
+</form>

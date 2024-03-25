@@ -1,0 +1,30 @@
+<div class="item-skeleton" *ngIf="loading; else contentSkeleton">
+  <ngx-skeleton-loader [theme]="{
+    'width': '107rem',
+    'height': '700px',
+    'border-radius': '0.5rem',
+    'background': '#0e0b14',
+    'display': 'block'
+  }"></ngx-skeleton-loader>
+</div>
+
+<ng-template #contentSkeleton>
+  <div *ngIf="indicators && dataFilm.length > 0" class="carousel-container">
+    <div *ngFor="let item of dataFilm; let i = index">
+      <div  *ngIf="indicators" [ngClass]="{ 'icon-prev-active': selectIndex === i, 'icon-prev': selectIndex !== i }" (click)="nextImg(i)">
+        <i class="uil uil-angle-left"></i>
+      </div>
+      <div  *ngIf="indicators" [ngClass]="{ 'icon-next-active': selectIndex === i, 'icon-next': selectIndex !== i }" (click)="nextImg(i)">
+        <i class="uil uil-angle-right"></i>
+      </div>
+      <h3 class="animate__animated animate__fadeInLeft" [ngClass]="{ 'title-active': selectIndex === i, 'title-film': selectIndex !== i }">{{item.title}}</h3>
+      <span class="animate__animated animate__fadeInLeft" [ngClass]="{ 'date-description-active': selectIndex === i, 'date-description-film': selectIndex !== i }">Fecha de Estreno {{item. release_date}}</span>
+      <img [src]="'https://image.tmdb.org/t/p/original' + item.backdrop_path" [alt]="item.title" [ngClass]="{'image-active': selectIndex === i}" class="fade">
+      <div *ngIf="indicators" class="carousel-dot-container">
+        <span *ngFor="let j of dataFilm; let k = index" class="dot" [ngClass]="{'active': selectIndex === k}" (click)="selectImg(k)"></span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
